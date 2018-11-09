@@ -7,14 +7,16 @@ A back-end to the world's most needlessly complicated doorbell
 
 1) `python manage.py runserver 0.0.0.0:8000`
 2) `python manage.py makesuperuser` to make an administrator
-3) Visit [the admin site](http://localhost:8000/admin)
-4) Upload a noise file or three. Maybe make a noise group. Go nuts.
-5) Open [the soundboard](http://localhost:8000/) and test out your files
-6) Issue a GET request to `http://localhost:8000/play_noise/your-file-name-here` from another device on your network
-7) Behold as your server's speakers play the requested sound file.
-8) Plant network-aware motion sensors all over your office.
+3) Visit [the admin site](http://localhost:8000/admin). Upload a noise file or three. Maybe make a noise group. Go nuts.
+4) Open [the soundboard](http://localhost:8000/) and test out your files
+5) Issue a GET request to `http://localhost:8000/play_noise/your-file-name-here` from another device on your network
+6) Behold as your server's speakers play the requested sound file.
 
-The intent here is to run the world's most needlessly complicated doorbell.
+The intent here is to have a computer in the room play a sound when a person interacts with something. For example:
+
+ - Play a chime when somebody opens the door
+ - Play a creaking noise when somebody sits in their chair
+ - Play a snippet of [heavy metal when Bitcoin prices fall](https://www.youtube.com/watch?v=uS1KcjkWdoU)
 
 **Disclaimer:** this is a *completely horrible* way of exposing your computer's speakers to a network.
 
