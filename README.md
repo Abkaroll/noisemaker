@@ -17,6 +17,10 @@ The intent here is to have a computer in the room play a sound when a person int
  - Play a chime when somebody opens the door
  - Play a creaking noise when somebody sits in their chair
  - Play a snippet of [heavy metal when Bitcoin prices fall](https://www.youtube.com/watch?v=uS1KcjkWdoU)
+ - Have your potted plant shout "FEED ME" when a moisture sensor detects the soil needs to be watered
+ - Make a rooster crow when sunlight first hits a solar panel in the window
+ 
+Who knows? This is really just a dumb network-connected jukebox.
 
 **Disclaimer:** this is a *completely horrible* way of exposing your computer's speakers to a network.
 
