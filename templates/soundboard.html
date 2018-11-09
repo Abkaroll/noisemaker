@@ -5,17 +5,28 @@
     <title>Noisemaker</title>
 </head>
 <body>
-<h1>Noises</h1>
+<h1>Specific Noises</h1>
 <ul>
     {% for noise in noises %}
-        <li><a href="{% url 'play_noise' noise.name %}">{{ noise.name }}</li>
+        <li><button onclick="makeNoise('{{ noise.name}}')">{{ noise.name }}</button></li>
     {% endfor %}
 </ul>
 <h1>Random Groups</h1>
 <ul>
     {% for group in groups %}
-        <li><a href="{% url 'play_random' group.name %}">{{ group.name }}</a></li>
+        <li><a href="{% url 'play_random' group.name %}" target="blank">{{ group.name }}</a></li>
     {% endfor %}
 </ul>
 </body>
 </html>
+
+<script>
+function makeNoise(slug) {
+    // Makes an XHTML request in the background to the noise-making API endpoint
+    // This makes the server's speakers squak
+    var oReq = new XMLHttpRequest();
+    oReq.open("get", "/play_noise/" + slug, true);
+    oReq.send();
+}
+
+</script>

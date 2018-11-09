@@ -20,8 +20,8 @@ from noisemaker import noise_api, views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(r'play_noise/<slug:name>', noise_api.PlayNoise.as_view()),
-    path(r'play_random/<slug:name>', noise_api.PlayRandomNoise.as_view()),
+    path(r'play_noise/<slug:name>', noise_api.PlayNoise.as_view(), name='play_noise'),
+    path(r'play_random/<slug:name>', noise_api.PlayRandomNoise.as_view(), name='play_random'),
     path('', views.SoundBoard.as_view()),
 ]
 
