@@ -13,6 +13,6 @@ A completely horrible way of exposing a server's speakers to a computer network.
 The intent here is to have a bunch of sensors hidden in an office somewhere world issue requests to one or more 
 servers also hidden in that office. I'm using it to run the world's most needlessly complicated doorbell.
 
-I wrote this in pursuite of office shenanigans and pranks. It's not production-ready by any means. 
+I wrote this in pursuit of office shenanigans and pranks. It's not production-ready by any means. 
 Seriously, don't expose this to the internet. There is no authentication. There's no sign-up flow. There's no
 ownership model or permissioning on the data.
