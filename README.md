@@ -2,8 +2,10 @@
 
 A completely horrible way of exposing a server's speakers to a computer network.
 
+## Instructions
+
 0) Set up the django server; I'll assume it's at http://localhost:8000.
-1) Upload a Noise file or three. Maybe make a noise group
+1) Log into http://localhost:8000/admin and upload a Noise file or three. Maybe make a noise group. Go nuts.
 2) Open http://localhost:8000/soundboard.html and test it out
 3) Have other devices on your network issue GET requests to http://localhost:8000/play_noise/your-file-name-here
 4) Behold as your server's speakers play the requested sound file.
