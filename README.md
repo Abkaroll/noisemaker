@@ -1,6 +1,6 @@
 # noisemaker
 
-A completely horrible way of exposing a server's speakers to a computer network.
+A completely horrible way of exposing your computer's speakers to a network.
 
 ## Instructions
 
