@@ -11,10 +11,10 @@
         <li><button onclick="makeNoise('{{ noise.name}}')">{{ noise.name }}</button></li>
     {% endfor %}
 </ul>
-<h1>Random Groups</h1>
+<h1>Random Groups of Noises</h1>
 <ul>
-    {% for group in groups %}
-        <li><a href="{% url 'play_random' group.name %}" target="blank">{{ group.name }}</a></li>
+    {% for noise in groups %}
+        <li><button onclick="makeNoise('{{ noise.name}}')">{{ noise.name }}</button></li>
     {% endfor %}
 </ul>
 </body>
