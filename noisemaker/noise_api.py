@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from rest_framework import views
 
 from noisemaker.models import NoiseFile, RandomNoiseFile
@@ -9,9 +10,10 @@ class PlayNoise(views.APIView):
     """
     model = NoiseFile
 
-    def get(self, request, noise_name):
-        noise_file = self.model.objects.get(name=noise_name)
+    def get(self, request, name):
+        noise_file = self.model.objects.get(name=name)
         noise_file.play()
+        return HttpResponse(status=200)
 
 
 class PlayRandomNoise(PlayNoise):

@@ -2,6 +2,7 @@ import random
 from django.db import models
 import pygame
 
+
 class PlayMixin(object):
     """
     Add a .play() method to any object which has a .file attribute
@@ -11,6 +12,7 @@ class PlayMixin(object):
         Play the noise file out of the server's speakers
         """
         # Wow this is a really heavyweight way to play a sound out of the server's speakers, but oh well....
+        pygame.mixer.init(44100, -16, 2, 2048)
         pygame.mixer.music.load(self.file.name)
         pygame.mixer.music.play(0)
 
@@ -19,8 +21,8 @@ class NoiseFile(models.Model, PlayMixin):
     """
     A sound byte we can play
     """
-    name = models.CharField(unique=True, help_text="A unique name which will be used to look up the noise")
-    description = models.CharField()
+    name = models.SlugField(unique=True, help_text="A unique name which will be used to look up the noise")
+    description = models.TextField(max_length=100)
     file = models.FileField()
 
 
@@ -28,7 +30,7 @@ class RandomNoiseFile(models.Model, PlayMixin):
     """
     Trigger one of several sound files.
     """
-    name = models.CharField(unique=True, help_text="A unique name which will be used to look up the noise")
+    name = models.SlugField(unique=True, help_text="A unique name which will be used to look up the noise")
     file_choices = models.ManyToManyField(NoiseFile)
 
     @property

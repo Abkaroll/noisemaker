@@ -8,13 +8,13 @@
 <h1>Noises</h1>
 <ul>
     {% for noise in noises %}
-        <li><a href="{% reverse play_noise noise.name %}">{{ noise.name }}</li>
+        <li><a href="{% url 'play_noise' noise.name %}">{{ noise.name }}</li>
     {% endfor %}
 </ul>
 <h1>Random Groups</h1>
 <ul>
     {% for group in groups %}
-        <li><a href="{% reverse play_random group.name %}">{{ group.name }}</a></li>
+        <li><a href="{% url 'play_random' group.name %}">{{ group.name }}</a></li>
     {% endfor %}
 </ul>
 </body>
